@@ -82,9 +82,6 @@ int main()
     printf("FIM DE JOGO!\n");
     printf("************\n");
 
-    printf("\nVocê utilizou %d tentativas\n", tentativas-1);
-    printf("Total de pontos: %.1f\n", pontos);
-
     if(chute == numeroSecreto)
         {
             printf("\n\n");
@@ -114,7 +111,12 @@ int main()
     else
         {
             printf("VOCÊ PERDEU!\n");
+            pontos = 0;
+            tentativas -=1;
         }
+
+    printf("\nTotal de pontos: %.1f\n", pontos);
+    printf("\nVocê utilizou %d tentativas\n", tentativas);
 
     scanf("%d");
 
